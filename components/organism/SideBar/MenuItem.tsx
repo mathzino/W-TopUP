@@ -6,9 +6,10 @@ interface MenuItemProps {
   title: string;
   icon: string;
   active?: boolean;
+  href: string;
 }
 export default function MenuItem(props: Partial<MenuItemProps>) {
-  let { title, icon, active } = props;
+  let { title, icon, active, href } = props;
   let classItem = cx({
     item: true,
     "mb-30": true,
@@ -37,7 +38,7 @@ export default function MenuItem(props: Partial<MenuItemProps>) {
           <Image src={`/icon/ic-menu-${icon}.svg`} width={25} height={25} />
         </div>
         <p className="item-title m-0">
-          <Link href={`/${title}`}>
+          <Link href={`/${href}`}>
             <a className="text-lg text-decoration-none">{title}</a>
           </Link>
         </p>
