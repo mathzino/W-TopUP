@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { title } from "process";
-interface StepItemsProps {
+export interface StepItemsProps {
   icon: "step1" | "step2" | "step3";
   desc1: string;
   desc2: string;
